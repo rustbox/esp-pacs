@@ -98,6 +98,7 @@ pub union Vector {
 #[cfg(feature = "rt")]
 #[doc(hidden)]
 #[no_mangle]
+#[link_section = ".data"]
 pub static __EXTERNAL_INTERRUPTS: [Vector; 62] = [
     Vector { _handler: WIFI_MAC },
     Vector {
